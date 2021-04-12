@@ -7,11 +7,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-msrj!$#)_9)x37x4@nkxy1^mcxak$q!$l0#8h++o&r0=k7srq@'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -78,9 +75,9 @@ WSGI_APPLICATION = 'eco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'eco',
-        'USER': 'eco_user',
-        'PASSWORD': '12345',
+        'NAME': 'db_name',
+        'USER': 'user_login',
+        'PASSWORD': 'user_pass',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -129,5 +126,3 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGIN_REDIRECT_URL = "/admin"
