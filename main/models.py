@@ -30,6 +30,6 @@ class Location(models.Model):
     longitude = models.CharField(max_length=11)
     created_at = models.DateField()
     updated_at = models.DateField()
-    data = models.TextField()
+    data = models.JSONField()
 
 
